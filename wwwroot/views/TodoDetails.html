@@ -1,0 +1,36 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <form name="vm.todo">
+                <!--Todo Name-->
+                <div class="form-group">
+                    <label for="email">Todo Name:</label>
+                    <input type="text"
+                           class="form-control"
+                           id="name"
+                           placeholder="Enter todo name"
+                           name="name"
+                           ng-model="todo.Name"
+                           required>
+                </div>
+                <!--Todo Description-->
+                <div class="form-group">
+                    <label for="email">Name:</label>
+                    <textarea type="text"
+                              class="form-control"
+                              id="description"
+                              placeholder="Enter todo description"
+                              rows="5"
+                              name="description"
+                              ng-model="todo.TodoDescription"
+                              required></textarea>
+                </div>
+                <!--Todo checkbox-->
+                <div class="checkbox">
+                    <label><input type="checkbox" ng-model="todo.IsComplete"> Is Complete</label>
+                </div>
+            </form>
+            <button class="btn btn-success" ng-click="UpdateTodo()" ng-disabled="!vm.todo.$valid">Update</button>
+        </div>
+    </div>
+</div>

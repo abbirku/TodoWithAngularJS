@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Todo SPA</title>
+
+    <!-- Bootstrap -->
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body ng-controller="TodoLayoutCtrl">
+
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <h3 class="text-success">Todo Single Page Application</h3>
+        </div>
+    </div>
+
+    <!--Sub template holding location-->
+    <ng-view></ng-view>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--Angular js lib-->
+    <script src="lib/angularjs/angular.min.js"></script>
+    <script src="lib/angularjs/angular-route.min.js"></script>
+
+    <!--Todo app-->
+    <script src="js/angularjs/app.js"></script>
+
+    <!--Custom Controllers-->
+    <script src="js/angularjs/controllers/TodoListCtrl.js"></script>
+    <script src="js/angularjs/controllers/TodoDetailsCtrl.js"></script>
+
+    <!--Custom Services-->
+    <script src="js/angularjs/services/TodoService.js"></script>
+</body>
+</html>
